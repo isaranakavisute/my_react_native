@@ -5,6 +5,10 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios --simulator='iPhone 14 Pro Max'",
+    "ios1": "react-native run-ios",
+    "doctor": "react-native doctor",
+    "eject": "react-native eject",
+    "link": "react-native link",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "start": "react-native start",
     "test": "jest",
@@ -25,6 +29,7 @@
     "@react-native-async-storage/async-storage": "^1.19.1",
     "@react-native-clipboard/clipboard": "^1.11.2",
     "@react-native-community/checkbox": "^0.5.16",
+    "@react-native-community/cli": "^8.0.6",
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/devtools": "^6.0.19",
     "@react-navigation/native": "^6.1.7",
@@ -41,7 +46,7 @@
     "react-i18next": "^13.0.2",
     "react-native": "^0.72.6",
     "react-native-asset": "^2.1.1",
-    "react-native-flipper": "^0.212.0",
+    "react-native-flipper": "^0.164.0",
     "react-native-gesture-handler": "^2.12.1",
     "react-native-google-places-autocomplete": "^2.5.1",
     "react-native-linear-gradient": "^2.8.2",
@@ -61,6 +66,7 @@
     "redux-flipper": "^2.0.2",
     "redux-persist": "^6.0.0",
     "styled-components": "^6.0.5",
+    "watchman": "^1.0.0",
     "yup": "^1.2.0"
   },
   "devDependencies": {

@@ -60,6 +60,8 @@ const LearnIndex = ({}: Props): JSX.Element => {
     return () => {};
   }, []);
 
+
+
   return (
     <DefaultLayout statusBarColor="dark-content">
       <CustomScrollView>
@@ -144,6 +146,9 @@ const LearnIndex = ({}: Props): JSX.Element => {
               <Text style={[Fonts.text28Light, Fonts.textWhite]}>
                 TOP 10 คอร์สเรียนยอดนิยม
               </Text>
+              <Text style={[Fonts.text28Light, Fonts.textRed, Fonts.textBold, styles.underline]}>
+                Isara , Feb 23 2025 08:00
+              </Text>
               <LearnCatalog />
 
               <Text style={[Fonts.text28Light, Fonts.textWhite]}>
@@ -219,6 +224,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
+  underline: {
+    textDecorationLine: 'underline',
+    textDecorationColor: 'white',
+    textDecorationStyle: 'dotted'
+}
 });
 
 export default LearnIndex;

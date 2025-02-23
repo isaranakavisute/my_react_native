@@ -5,6 +5,7 @@ import CatalogTitle, { CatalogTitleProps } from './CatalogTitle';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { ApplicationStackParamList, ProductParamsList } from 'types/navigation';
 import { CatalogTitleColorActived } from '@/model/options';
+import { deflateRaw } from 'zlib';
 
 interface Props {
   method?:
@@ -51,7 +52,7 @@ const Catalog: FunctionComponent<Props> = ({ method, icon, brandName }) => {
 
   const TitleRender = () => {
     const data: CatalogTitleProps = {
-      textColors: 'black',
+      textColors: 'black'
     };
     //แยกเป็นหมวดหมู่ต่างๆ
     switch (method) {
@@ -73,6 +74,11 @@ const Catalog: FunctionComponent<Props> = ({ method, icon, brandName }) => {
         data.title = 'ช้อปสินค้าตามหมวดหมู่';
         data.subTitle = 'สินค้าแยกตามประเภทหมวดหมู่ อุตสาหกรรม ';
         break;
+
+      case 'Isara':
+          data.title = 'Isara Nakavisute';
+          data.subTitle = '23 Feb 2025 08:00';
+          break;
 
       case 'flashStore':
         data.flashSale = true;

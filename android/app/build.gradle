@@ -69,9 +69,9 @@ def enableProguardInReleaseBuilds = false
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
-    ndkVersion rootProject.ext.ndkVersion
+    //ndkVersion 28.0.13004108 /*ndkVersion*/
+    //compileSdkVersion 35 /*compileSdkVersion*/
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
 
     namespace "com.unifly"
     defaultConfig {
@@ -80,6 +80,13 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
+        compileSdkVersion 35
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+            }
+        }
     }
     signingConfigs {
         debug {

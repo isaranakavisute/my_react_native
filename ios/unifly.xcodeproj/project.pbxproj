@@ -519,7 +519,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = U5DUP9H7X4;
+				DEVELOPMENT_TEAM = BNH65G6LZV;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = unifly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Unifly;
@@ -535,7 +535,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.krapaogame.unifly.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.unifly;
 				PRODUCT_NAME = unifly;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -555,7 +555,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = U5DUP9H7X4;
+				DEVELOPMENT_TEAM = BNH65G6LZV;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = unifly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Unifly;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
@@ -570,7 +571,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.krapaogame.unifly.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.unifly;
 				PRODUCT_NAME = unifly;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

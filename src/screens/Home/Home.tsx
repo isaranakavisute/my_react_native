@@ -116,6 +116,9 @@ const Home = ({ navigation }: Props): JSX.Element => {
           <ProductCatalog method={ProductCatalogMethod.product} />
 
           <Catalog method="catalogType" />
+
+          <Catalog method="Isara" />
+
           <CatalogList />
           <Carousel />
 

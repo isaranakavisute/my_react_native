@@ -39,6 +39,9 @@ const Layout = ({}: ThemeVariables) => {
     bgWhite: {
       backgroundColor: Colors.white,
     },
+    bgBlue: {
+      backgroundColor: Colors.blue,
+    },
     bottom0: {
       bottom: 0,
     },

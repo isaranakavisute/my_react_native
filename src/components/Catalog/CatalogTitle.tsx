@@ -14,7 +14,7 @@ export interface CatalogTitleProps {
   brandIcon?: JSX.Element;
   isActived?: boolean;
   colorActived?: CatalogTitleColorActived;
-  textColors: 'black' | 'white';
+  textColors: 'black' | 'white' | 'blue';
 }
 
 // หัวข้อแคตตาล็อก
