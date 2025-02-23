@@ -60,8 +60,6 @@ target 'unifly' do
   post_install do |installer|
 
 
-
-
     bitcode_strip_path = `xcrun --find bitcode_strip`.chop!
     def strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
      framework_path = File.join(Dir.pwd, framework_relative_path)
@@ -80,8 +78,6 @@ target 'unifly' do
     framework_paths.each do |framework_relative_path|
      strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
     end
-
-
 
 
 
