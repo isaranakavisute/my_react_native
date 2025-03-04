@@ -1,6 +1,6 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: ['module:metro-react-native-babel-preset' /*'module:@react-native/babel-preset'*/],
   plugins: [
     [
       'module-resolver',
@@ -21,5 +21,6 @@ module.exports = {
     ],
     'inline-dotenv',
     'react-native-reanimated/plugin', // needs to be last
+    //['@babel/plugin-transform-private-methods', { loose: true }]
   ],
 };

@@ -25,11 +25,13 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.6",
+    "@babel/plugin-transform-private-methods": "^7.25.9",
     "@gorhom/bottom-sheet": "^4.4.7",
     "@react-native-async-storage/async-storage": "^1.19.1",
     "@react-native-clipboard/clipboard": "^1.11.2",
     "@react-native-community/checkbox": "^0.5.16",
     "@react-native-community/cli": "^8.0.6",
+    "@react-native/babel-preset": "^0.78.0",
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/devtools": "^6.0.19",
     "@react-navigation/native": "^6.1.7",

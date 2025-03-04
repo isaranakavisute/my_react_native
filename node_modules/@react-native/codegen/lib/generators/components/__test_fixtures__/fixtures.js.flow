@@ -872,6 +872,38 @@ const OBJECT_PROPS: SchemaType = {
                     },
                   },
                   {
+                    name: 'stringUserDefaultProp',
+                    optional: true,
+                    typeAnnotation: {
+                      type: 'StringTypeAnnotation',
+                      default: 'user_default',
+                    },
+                  },
+                  {
+                    name: 'booleanUserDefaultProp',
+                    optional: true,
+                    typeAnnotation: {
+                      type: 'BooleanTypeAnnotation',
+                      default: true,
+                    },
+                  },
+                  {
+                    name: 'floatUserDefaultProp',
+                    optional: true,
+                    typeAnnotation: {
+                      type: 'FloatTypeAnnotation',
+                      default: 3.14,
+                    },
+                  },
+                  {
+                    name: 'intUserDefaultProp',
+                    optional: true,
+                    typeAnnotation: {
+                      type: 'Int32TypeAnnotation',
+                      default: 9999,
+                    },
+                  },
+                  {
                     name: 'stringEnumProp',
                     optional: true,
                     typeAnnotation: {
@@ -1231,8 +1263,17 @@ const EVENT_PROPS: SchemaType = {
                       typeAnnotation: {
                         type: 'ArrayTypeAnnotation',
                         elementType: {
-                          type: 'StringEnumTypeAnnotation',
-                          options: ['YES', 'NO'],
+                          type: 'StringLiteralUnionTypeAnnotation',
+                          types: [
+                            {
+                              type: 'StringLiteralTypeAnnotation',
+                              value: 'YES',
+                            },
+                            {
+                              type: 'StringLiteralTypeAnnotation',
+                              value: 'NO',
+                            },
+                          ],
                         },
                       },
                     },
@@ -1332,8 +1373,17 @@ const EVENT_PROPS: SchemaType = {
                       name: 'orientation',
                       optional: false,
                       typeAnnotation: {
-                        type: 'StringEnumTypeAnnotation',
-                        options: ['landscape', 'portrait'],
+                        type: 'StringLiteralUnionTypeAnnotation',
+                        types: [
+                          {
+                            type: 'StringLiteralTypeAnnotation',
+                            value: 'landscape',
+                          },
+                          {
+                            type: 'StringLiteralTypeAnnotation',
+                            value: 'portrait',
+                          },
+                        ],
                       },
                     },
                   ],
@@ -1643,6 +1693,16 @@ const COMMANDS: SchemaType = {
                       type: 'BooleanTypeAnnotation',
                     },
                   },
+                  {
+                    name: 'locations',
+                    optional: false,
+                    typeAnnotation: {
+                      type: 'ArrayTypeAnnotation',
+                      elementType: {
+                        type: 'MixedTypeAnnotation',
+                      },
+                    },
+                  },
                 ],
                 returnTypeAnnotation: {
                   type: 'VoidTypeAnnotation',
@@ -1718,6 +1778,28 @@ const COMMANDS_AND_PROPS: SchemaType = {
                     optional: false,
                     typeAnnotation: {
                       type: 'Int32TypeAnnotation',
+                    },
+                  },
+                ],
+                returnTypeAnnotation: {
+                  type: 'VoidTypeAnnotation',
+                },
+              },
+            },
+            {
+              name: 'addItems',
+              optional: false,
+              typeAnnotation: {
+                type: 'FunctionTypeAnnotation',
+                params: [
+                  {
+                    name: 'items',
+                    optional: false,
+                    typeAnnotation: {
+                      type: 'ArrayTypeAnnotation',
+                      elementType: {
+                        type: 'StringTypeAnnotation',
+                      },
                     },
                   },
                 ],

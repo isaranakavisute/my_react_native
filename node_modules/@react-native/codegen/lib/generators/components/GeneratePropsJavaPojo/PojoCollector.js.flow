@@ -11,17 +11,17 @@
 'use strict';
 
 import type {
-  ReservedPropTypeAnnotation,
-  NamedShape,
-  ObjectTypeAnnotation,
   BooleanTypeAnnotation,
-  StringTypeAnnotation,
+  ComponentArrayTypeAnnotation,
   DoubleTypeAnnotation,
   FloatTypeAnnotation,
   Int32TypeAnnotation,
-  PropTypeAnnotation,
   MixedTypeAnnotation,
-  ArrayTypeAnnotation,
+  NamedShape,
+  ObjectTypeAnnotation,
+  PropTypeAnnotation,
+  ReservedPropTypeAnnotation,
+  StringTypeAnnotation,
 } from '../../../CodegenSchema';
 
 const {capitalize} = require('../../Utils');
@@ -111,8 +111,10 @@ class PojoCollector {
       }
       case 'ArrayTypeAnnotation': {
         const arrayTypeAnnotation = typeAnnotation;
-        const elementType: $PropertyType<ArrayTypeAnnotation, 'elementType'> =
-          arrayTypeAnnotation.elementType;
+        const elementType: $PropertyType<
+          ComponentArrayTypeAnnotation,
+          'elementType',
+        > = arrayTypeAnnotation.elementType;
 
         const pojoElementType = (() => {
           switch (elementType.type) {
